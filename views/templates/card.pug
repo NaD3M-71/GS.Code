@@ -1,0 +1,18 @@
+div(class="bg-white border-black shadow rounded-lg border-2 m-5")
+    img(src=`/img/${proyecto.imagen}` alt=`Imagen de ${proyecto.titulo}`  class="object-cover w-full")
+    div(class="p-5 space-y-2 border-black ")    
+        h3(class="text-xl font-bold text-center mb-6")=`${proyecto.titulo}`
+
+        //- p(class="text-sm text-gray-600 h-52") Descripción: <br>
+        //-     span(class="text-gray-800 font-bold")= proyecto.descripcion
+        //- p(class="text-sm text-gray-600") Url: 
+        //-     a(class="text-gray-800 font-bold" href=proyecto.url)= proyecto.url
+        //- p(class="text-sm text-gray-600") GitHub: 
+        //-     a(class="text-gray-800 font-bold" href=proyecto.github)= proyecto.github
+        //- p(class="text-sm text-gray-600") Propio: 
+        //-     if (proyecto.propio = 1)
+        //-         span(class="text-gray-800 font-bold")= Si 
+        //-     else 
+        //-         span(class="text-gray-800 font-bold")= No TODO: Ver si se puede hacer facil o borrar a la mierda
+                
+        a(href=`/proyecto/${proyecto.id}` class="bg-green-600 rounded-lg text-black uppercase font-bold text-center block w-full p-2") Ver Proyecto

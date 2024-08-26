@@ -1,0 +1,41 @@
+extends ../layout/app
+block styles
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+block contenido 
+    
+    div(class='py-5')
+        h1(id="titulo" class="text-4xl my-5 font-extrabold text-center")= pagina
+
+
+        div(class="mt-5 md:flex md:gap-4 ")
+            div(class="md:w-1/3 shadow rounded")
+                img(src=`img/Foto-CV.jpg`, alt=`Imagen de Logo` class="hidden md:block  md:size-auto img-contacto ")
+
+                
+            div(class="md:w-2/3 bg-white shadow-xl rounded")
+                div(class="px-5 py-5 space-y-5 p-4")
+                    h2(class="text-2xl leading-6 font-bold text-gray-900") SOBRE MÍ
+                    p Mi nombre es Giuliano Scaglioni, tengo 27 años y soy de Esquel, Chubut. Una pequeña ciudad al sur de Argentina. Como indica la página soy programador, me especializo en Desarrollo Backend aunque se hacer de todo un poco. Comencé mis estudios a fines de 2022 luego de abandonar la carrera de Bioquimica. Y entre mis deseo profesionales programar siempre estuvo entre los primeros pero nunca le dedique el tiempo para aprender porque crei que no era para mi. Hoy agradezco haber seguido esa corazonada de intentar seguir mi carrera profesional por esta rama. 
+                    
+                div(class="p-5" )
+                    div(class="rounded border border-slate-600 p-2 my-2")
+                        h3(class="text-xl leading-6 font-bold text-gray-900") Información Académica
+                        h4(class="text-l leading-6 text-gray-700 text-justify") Arranque mi formacion con cursos online de Python y programacion general, conceptos y logica. Despues de recavar informacion de amigos que hoy son colegas inicie un curso en UTN de desarrollo web FullStack donde aprendi PHP y mi primer acercamiento al Backend y a las bases de datos. Como sentí el curso incompleto en lo que respecta a Javascript, inicie una capacitacion especifica en en ese lenguaje. <br> Ademas solicité una beca en Comunidad IT que ofrecia capacitacion en Analisis de Datos y diseño UX de parte de Google inc. Disfrute el curso de Datos pero me hizo notar que lo a mi me gustaba iba por otra rama de la programacion, por lo que decidí profundizar mis conocimientos en Backend en la plataforma Udemy. <br> Hice hasta ahora cursos de desarrollo web con Nodejs, Laravel y .NET. En estos cursos complemente mucho mi formacion en materia de seguridad, autenticacion, autorizaciones, microservicios, la nube, aprendí a hacer deployments en distintas plataformas, a hacer aplicaciones monoliticas y a separar el front del backend, aprendí tambien a organizar mi codigo para que sea legible y buenas practicas que se utilizan en la industria IT.<br> Con esto en ya en mi conocimiento en 2024 me inscribí en la carrera de Analista Programador Universitario en la Universidad Nacional de la Patagonia San Juan Bosco para complementar mi conocimiento y obtener un titulo profesional.
+                    div(class="rounded border border-slate-600 p-2 my-2")
+                        h3(class="text-xl leading-6 font-bold text-gray-900") Experiencia Profesional
+                        h4(class="text-l leading-6 text-gray-700 text-justify") Cuando termine mi primer curso FullStack intente conseguir mis primeros trabajos para hacer paginas web, realice con mis inexpertos conocimientos mis primeras web para conocidos de mi ciudad. Mi primer trabajo fue una landing page para un Rent-a-car en la que solo mostraba informacion, ninguna otra funcionalidad que mostrar el negocio los autos y un formulario con informacion de contacto. Luego hice lo mismo con unas cabañas para alquiler. Mientras iba haciendo proyectos personales para tener para mostrar en el portfolio. <br> Mi primer proyecto personal fue una "Bolsa de trabajo" para oficios de la ciudad. La desarrollé con PHP y MySQL, y mi idea era presentarsela a la Municipalidad de Esquel para que ellos tomen el trabajo de implementarla como un servicio social para la ciudad. Tanto el intendente como algunos concejales estaban interesados pero por alguna razon que desconozco el proyecto no siguio. Tambien hice una plataforma deportiva virtual para ver el calendario, resultados y tablas de una liga de Futbol Sala local. Intenté venderla a las ligas locales pero segun ellos no necesitaban tal tecnología porque se manejaban via redes sociales. <br> Mientras aprendia nuevas tecnologias, fui realizando proyectos con Node y mis nuevos conocimientos. Realice una aplicacion de Bienes Raices, con mapa interactivo local, sistema de usuarios, mensajeria dentro de la plataforma y manejo de archivos. Otra aplicacion fue una bolsa de trabajo para desarrolladores, que tambien tenia manejo de usuarios, modificacion de perfil, envio de CVs.<br> En enero de 2024 empece a trabajar como programador para el Gobierno del Chubut, un trabajo a medio tiempo por contrato. En el cual mis tareas fueron reordenar y rediseñar algunas paginas del gobierno, por ejemplo con la que mas suelo trabajar es la Secretaría de Bosques del Chubut. Hasta el dia de hoy sigo en ese trabajo pero continuo en busqueda de algo full-time en alguna consultora o software factory.
+                        
+                
+                   
+                
+        div(class="w-full bg-white my-5 shadow rounded p-5 flex justify-around") Otros medios de contacto  
+            h6 WhatsApp: 
+                span(class="font-extrabold") +54 2945-553077  
+            h6 Email: 
+                span(class="font-extrabold") scaglioni96@gmail.com
+
+
+                    
+block scripts  
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+    

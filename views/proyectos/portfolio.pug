@@ -1,0 +1,11 @@
+extends  ../layout/app
+//- TODO: Corregir no aparece el titulo en la pestaña
+block contenido 
+    h1.text-4xl.text-center.font-bold Portfolio 
+    h6.text-xl.text-center En este espacio podes encontrar mis proyectos personales y los de mis clientes.
+
+    div(class="container grid grid-cols-1 md:grid-cols-3 gap-5 mt-5")
+        each proyecto in proyectos
+                include ../templates/card
+        
+        

@@ -1,0 +1,37 @@
+extends ../layout/app
+block styles
+block contenido 
+    
+    div(class='py-5')
+        h1(id="titulo" class="text-4xl my-5 font-extrabold text-center")= proyecto.titulo
+
+
+        div(class="mt-5 md:flex md:gap-4 ")
+            div(class="md:w-2/3 bg-white shadow rounded")
+                img(src=`/img/${proyecto.imagen}`, alt=`Imagen de ${proyecto.titulo}`)
+
+                
+            div(class="md:w-1/3 bg-white shadow rounded")
+                div(class="px-5 py-5 space-y-5 p-4")
+                    h2(class="text-2xl leading-6 font-bold text-gray-900") Descripcion del proyecto
+                    p= proyecto.descripcion
+                div(class="p-5")
+                    div(class="rounded border border-slate-600 p-2 my-2")
+                        h2(class="text-l leading-6 font-bold text-gray-900") URL: 
+                        a(href=`${proyecto.url}` class="font-extrabold text-blue-700 hover:text-blue-800")=  proyecto.titulo
+                
+                    div(class="rounded border border-slate-600 p-2 my-2")    
+                        h2(class="text-l leading-6 font-bold text-gray-900") GitHub: 
+                        a(href=`${proyecto.github}` class="font-extrabold text-blue-700 hover:text-blue-800")=  proyecto.github
+
+                    div(class="rounded border border-slate-600 p-2 my-2")
+                        h2(class="text-l leading-6 font-bold text-gray-900") Es un proyecto propio? 
+                            if proyecto.propio
+                                p SI
+                            else 
+                                p NO
+
+
+                    
+block scripts  
+    

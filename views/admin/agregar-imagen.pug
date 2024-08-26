@@ -1,0 +1,22 @@
+extends  ../layout/app
+
+block styles 
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.css")
+
+block contenido
+    h1.text-center.text-4xl.font-bold Panel del Administrador 
+
+    div(class="grid grid-cols-1") 
+        h6.text-xl.underline.my-5.mx-auto Agregar Imagen para #{proyecto.titulo}
+
+        div(class="container bg-black shadow m-7 max-w-4xl mx-auto")
+            form(id='imagen' class="dropzone border-dashed border-2 w-auto min:h-96 h-auto rounded m-5" method="post" action=`/admin/agregar-imagen/${proyecto.id}`) 
+            
+            div.p-7.text-right         
+            input(type="submit", value="Agregar Proyecto" id="publicar" class="text-white p-4 font-bold border-2 rounded-md bg-slate-600 cursor-pointer hover:bg-slate-800 w-full")
+                    
+                
+
+block scripts
+    script(src="/js/agregarImagen.js")
+                

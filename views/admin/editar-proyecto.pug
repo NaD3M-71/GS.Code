@@ -1,0 +1,28 @@
+extends  ../layout/app
+
+block contenido
+    h1.text-center.text-4xl.font-bold Panel del Administrador 
+
+    div 
+        h6.text-xl.underline.mb-5.font-bold= `Editar ${proyecto.titulo}`
+
+        div(class="container bg-black shadow m-7 max-w-4xl")
+            form(method="post" action="/admin/agregar-proyecto") 
+                div.p-7
+                    label.block.text-md.uppercase.text-white.mb-2.font-bold(for="titulo") Titulo 
+                    input(type="text", name="titulo" class="w-full px-3 py-2 border-2 rounded-md bg-gray-200 border-verde-bg" value=`${proyecto.titulo}`)
+                div.p-7
+                    label.block.text-md.uppercase.text-white.mb-2.font-bold(for="descripcion") Descripción 
+                    textarea(name="descripcion" class="w-full px-3 py-2 border-2 rounded-md bg-gray-200 border-verde-bg" cols="30", rows="10" )=proyecto.descripcion
+                div.p-7
+                    label.block.text-md.uppercase.text-white.mb-2.font-bold(for="url") URL 
+                    input(type="text", name="url" class="w-full px-3 py-2 border-2 rounded-md bg-gray-200 border-verde-bg" value=`${proyecto.url}`)
+                div.p-7
+                    label.block.text-md.uppercase.text-white.mb-2.font-bold(for="github") Github: 
+                    input(type="text", name="github" class="w-full px-3 py-2 border-2 rounded-md bg-gray-200 border-verde-bg" value=`${proyecto.github}`)
+                div.p-7
+                    label.block.text-md.uppercase.text-white.mb-2.font-bold(for="propio") Es un proyecto propio?
+                    input(type="checkbox", name="propio" class="px-3 py-2 border-2 rounded-md bg-gray-200 border-verde-bg")
+                div.p-7.text-right     
+                    input(type="submit", value="Guardar Cambios" class="text-white p-4 font-bold border-2 rounded-md bg-slate-600 cursor-pointer hover:bg-slate-800")
+                
