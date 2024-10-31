@@ -15,10 +15,10 @@ body {
 .descripcion{
     font-weight: 600;
 }
-.descripcion div div{
+/* .descripcion div div{
     width: 270px;
     
-}
+} */
 .habilidades{
     box-shadow: 0px 10px 150px #000;
     border-radius: 40px;

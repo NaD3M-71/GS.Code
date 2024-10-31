@@ -1,9 +1,14 @@
 import express from "express";
-import routes from './routes/routes.js'
-import db from './config/db.js'
+import routes from './routes/routes.js';
+import db from './config/db.js';
+import cookieParser from "cookie-parser";
 
 // Creando al app
 const app = express();
+
+//Habilitar cookieParser
+app.use(cookieParser());
+
 //  habilitar body request
 app.use( express.urlencoded({extended:true}))
 

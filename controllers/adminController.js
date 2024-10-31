@@ -2,6 +2,10 @@ import { Sequelize } from 'sequelize'
 import Proyecto from '../models/Proyectos.js'
 import { raw } from 'mysql2';
 
+
+
+
+
 // TODO: proteger rutas admin con jwt
 const admin = async (req,res) =>{
     const proyectos = await Proyecto.findAll({raw:true});
@@ -74,10 +78,12 @@ const editarProyecto = async(req,res)=>{
     const proyecto = await Proyecto.findByPk(req.params.id)
     res.render('admin/editar-proyecto',{
         pagina: `Editar ${proyecto.titulo}`,
+        admin,
         proyecto
     });
 }
 const eliminarProyecto = (req,res)=>{
+    // TODO: eliminar proyecto
     res.send("modificar proy");
 }
 

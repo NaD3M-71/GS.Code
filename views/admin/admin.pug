@@ -1,11 +1,11 @@
 extends  ../layout/app
 
 block contenido
-    h1.text-center.text-4xl.font-bold Panel del Administrador 
+    h1.text-center.text-4xl.font-bold.mb-10 Panel del Administrador 
 
     div 
-        a(class="border-2 border-black p-4 text-white rounded-3xl bg-gray-800" href="admin/agregar-proyecto") Agregar nuevo Proyecto
-        h6.text-xl.underline.mb-5 Proyectos 
+        a(class="border-2 font-bold border-black p-4 text-white rounded-3xl bg-gray-800 hover:bg-slate-500" href="admin/agregar-proyecto") Agregar nuevo Proyecto
+        h6.text-xl.underline.m-5.font-bold Proyectos 
         div(class="container grid grid-cols-1 md:grid-cols-3 gap-5 mt-5")
             each proyecto in proyectos 
                 include ../templates/card-admin

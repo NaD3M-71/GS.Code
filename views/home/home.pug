@@ -7,47 +7,39 @@ block contenido
         img(src="img/Logov2.png" alt="Logo GS Code" class="img-main py-4")
     div(class="content-center justify-center bg-black descripcion rounded-xl py-4 my-5 container")
         h2(class="text-verde-bg text-center text-2xl p-5")  Bienvenido a GS.Code 
-        div(class="flex gap-3 text-center flex-wrap justify-evenly flex-col md:flex-row content-center") 
-            div(class="p-4 border-2 border-verde-bg rounded-xl  ")
-                h4(class="text-verde-bg font-bold text-xl") Servicios
-                ul(class="text-verde-bg text-justify") 
-                    li -Diseño y desarrollo para tu página o aplicacion web con las ultimas tecnologias del mercado IT.
-                    li -Optimización y/o rediseño de tu web.
-                    li -Migraciones de páginas a otras tecnologias. 
-                    li Y todo tipo de soluciones para nuevos y viejos problemas en tus páginas.
-            div(class="p-4 border-2 border-verde-bg rounded-xl  ") 
+        div(class="flex gap-5 text-center flex-wrap justify-evenly flex-col md:flex-row content-center") 
+            div(class="p-4 border-2 border-verde-bg rounded-xl md:w-1/3 w-3/4 hover:border-gray-600 ")
+                h4(class="text-verde-bg font-bold text-xl border-1 border-white") Servicios
+                p(class="text-white text-justify")="Servicios de desarrollo y diseño web, sistemas, aplicaciones para su emprendimiento o empresa. Mantenga su negocio o emprendimiento actualizado con su propia web, con información para futuros clientes. Desde landing pages para promocionar tus cabañas, sistemas de stock para llevar el inventario de tu negocio, un sistema web manejar el alquiler de bicicletas, turnos del gimnasio, o cualquier solución tecnológica para tu emprendimiento."
+                
+            div(class="p-4 border-2 border-verde-bg rounded-xl md:w-1/3 w-3/4 ") 
                 h4(class="text-verde-bg font-bold text-xl")  Atencion Personalizada
-                p(class="text-verde-bg text-justify") En constante actualización con las últimas tecnologias para el mantenimiento de los sistemas web de nuestros clientes. Optimizacion y seguridad de la información de tu sistema.
-            div(class="p-4 border-2 border-verde-bg rounded-xl"  ) 
-                h4(class="text-verde-bg font-bold text-xl")  Sobre Mi
-                p(class="text-verde-bg text-justify") Mi nombre es Giuliano Scaglioni, soy desarrollador Full Stack con orientacion a Back-end. Este proyecto llamado GS Code es mi marca personal como desarrollador Freelance. Aqui cargo mis proyectos personales y los de mis clientes.
-    div(class="md:flex flex-wrap justify-evenly p-4 my-5 shadow-2xl rounded-xl habilidades container")
-        div(class="flex flex-col items-center")
-            p.text-center
-                i(class="fa-solid fa-gears text-4xl")
-                h3(class="text-xl font-bold text-center") Back-End
-            p(class="text-lg font-bold") Stack: 
-                ul.text-center 
-                    li Node.js, .NET, PHP Laravel
-                    li MySQL, SQL Server, MongoDB
-            p(class="text-lg font-bold") Experiencia: 
-                ul.text-center 
-                    li ASP.NET Core
-                    li MVC 
-                    li Express 
-                    li Sequelize Mongoose 
-                    li WebAPIs
-        div(class="flex flex-col items-center") 
-            p.text-center        
-                i(class="fa-solid fa-display text-4xl")
-                h3(class="text-xl font-bold text-center") Front-End
-            p(class="text-lg font-bold") Stack: 
-                ul 
-                    li React 
-            p(class="text-lg font-bold") Experiencia: 
-                ul.text-center 
-                    li CRUD
-                    li Bootstrap 
-                    li TailwindCSS 
-                    li Leaflet 
-                    li Pug, Handlebars
+                p(class="text-white text-justify")= "La metodología de trabajo parte de 3 instancias, tenemos una primera reunión para una primera impronta sobre tus requerimientos, recibís una devolución después una cotización del servicio. Luego e abona una seña y se comienza primero a diseñar la página o sistema y luego con su visto bueno se desarrolla, una vez finalizada la etapa se abona el total y se despliega en su hosting de confianza o por un costo mensual bajo mi mantenimiento."
+            //- div(class="p-4 border-2 border-verde-bg rounded-xl"  ) 
+            //-     h4(class="text-verde-bg font-bold text-xl")  Sobre Mi
+            //-     p(class="text-verde-bg text-justify") Mi nombre es Giuliano Scaglioni, soy desarrollador Full Stack con orientacion a Back-end. Este proyecto llamado GS Code es mi marca personal como desarrollador Freelance. Aqui cargo mis proyectos personales y los de mis clientes.
+    div(class=" p-4 my-5 shadow-2xl rounded-xl habilidades container")
+        h2(class="font-bold text-center text-2xl p-5" ) Tecnologías
+        div(class="flex flex-wrap justify-evenly")
+            div(class="flex flex-col items-center w-1/3")
+                p.text-center
+                    i(class="fa-solid fa-gears text-4xl ")
+                    h3(class="text-xl font-bold text-center") Desarrollo
+                p(class="text-lg font-bold") Stack: 
+                    ul.text-center 
+                        li Node.js, .NET, PHP Laravel
+                        li MySQL, SQL Server, MongoDB
+                p(class="text-lg font-bold") Experiencia: 
+                    p.text-center Seguridad, autorizacion, autenticación, manejo de bases de datos, servicios en la nube.
+                       
+            div(class="flex flex-col items-center w-1/3") 
+                p.text-center        
+                    i(class="fa-solid fa-display text-4xl")
+                    h3(class="text-xl font-bold text-center") Diseño 
+                p(class="text-lg font-bold") Stack: 
+                    ul.text-center 
+                        li React 
+                        li WordPress CMS, Template Engines
+                p(class="text-lg font-bold") Experiencia: 
+                    p.text-center Diseños modernos o clasicos, graficos y colores a tu gusto, recomendaciones y sugerencias.
+                        

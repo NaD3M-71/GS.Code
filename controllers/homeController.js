@@ -2,7 +2,7 @@
 // Inicio
 const inicio = (req,res)=>{
     res.render('home/home',{
-        pagina: "Inicio"
+        pagina: "Inicio" 
     })
 }
 

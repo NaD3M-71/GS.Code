@@ -1,0 +1,42 @@
+extends ../layout/app
+block styles
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+block contenido 
+    
+    div(class='py-5')
+        h1(id="titulo" class="text-4xl my-5 font-extrabold text-center")= pagina
+
+
+        div(class="mt-5 md:flex md:gap-4 ")
+            div(class="md:w-1/3 shadow rounded")
+                img(src=`img/Logov2.png`, alt=`Imagen de Logo` class="hidden md:block  md:size-auto img-contacto ")
+
+                
+            div(class="md:w-2/3 bg-white shadow-xl rounded")
+                div(class="px-5 py-5 space-y-5 p-4")
+                    h2(class="text-2xl leading-6 font-bold text-gray-900") Inicia sesion
+                    p Formulario de Inicio de Sesion para iniciar la sesion
+                form(action="admin-login", method="post") 
+                    div(class="p-5" )
+                        div(class="rounded border border-slate-600 p-2 my-2")
+                            label(class="text-l leading-6 font-bold text-gray-900" for="usuario") Usuario: 
+                            input(type="text", name="usuario" class="w-full" placeholder="tu nombre de usuario para iniciar la sesion")
+                    
+                        div(class="rounded border border-slate-600 p-2 my-2")
+                            label(for="password" class="text-l leading-6 font-bold text-gray-900") Contraseña: 
+                            input(type="password" name="password" class="w-full" placeholder="Tu contraseña para iniciar la sesion")
+                    
+                        div(class="rounded my-2")
+                            input(type="submit", value="Iniciar Sesion" class="text-white p-4 font-bold border-2 rounded-md bg-slate-600 cursor-pointer hover:bg-slate-800 w-full")
+                
+        div(class="w-full bg-white my-5 shadow rounded p-5 flex justify-around") Otros medios de contacto  
+            h6 WhatsApp: 
+                span(class="font-extrabold") +54 2945-553077  
+            h6 Email: 
+                span(class="font-extrabold") scaglioni96@gmail.com
+
+
+                    
+block scripts  
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+    
