@@ -7,11 +7,11 @@ dotenv.config({ path: ".env" });
 // const BD_PASS = "";
 // const BD_HOST = "localhost";
 
-const { BD_NOMBRE, BD_USER, BD_PASS, BD_HOST } = process.env;
+const { BD_NOMBRE, BD_USER, BD_PASS, BD_HOST,BD_PORT } = process.env;
 // ?? hace que lea el valor de la variable y ponga ese valor, si no puede leerlo coloca lo que este despues, en este caso ""
 const db = new Sequelize(BD_NOMBRE, BD_USER, BD_PASS ?? "", {
   host: BD_HOST,
-  port: "3306",
+  port: BD_PORT,
   dialect: "mysql",
   define: {
     timestamps: true,
