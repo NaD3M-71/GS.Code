@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Genera una versión mínima para Docker (.next/standalone)
+  output: "standalone",
   images: {
     // Rutas locales que <Image> puede optimizar
     localPatterns: [

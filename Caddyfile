@@ -1,0 +1,19 @@
+# Caddy obtiene y renueva solo los certificados HTTPS (Let's Encrypt)
+
+www.gscode.com.ar {
+	redir https://gscode.com.ar{uri} permanent
+}
+
+gscode.com.ar {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	reverse_proxy app:3000
+}

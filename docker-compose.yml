@@ -1,0 +1,62 @@
+# Producción: app + MySQL + Caddy (HTTPS automático)
+# Uso en el VPS:  docker compose up -d --build
+
+name: gscode
+
+services:
+  app:
+    build: .
+    container_name: gscode-app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      BD_HOST: db
+      BD_PORT: 3306
+      UPLOADS_DIR: /app/uploads
+    volumes:
+      - uploads:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.4
+    container_name: gscode-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${BD_ROOT_PASS}
+      MYSQL_DATABASE: ${BD_NOMBRE}
+      MYSQL_USER: ${BD_USER}
+      MYSQL_PASSWORD: ${BD_PASS}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+      - ./db/conf/bajo-consumo.cnf:/etc/mysql/conf.d/bajo-consumo.cnf:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p\"$$MYSQL_ROOT_PASSWORD\" --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 40s
+    # Sin "ports": la base NO queda expuesta a internet, solo la ve la app
+
+  caddy:
+    image: caddy:2
+    container_name: gscode-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+
+volumes:
+  db_data:
+  uploads:
+  caddy_data:
+  caddy_config:
