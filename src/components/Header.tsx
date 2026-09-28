@@ -33,7 +33,7 @@ export default function Header() {
           className="flex items-center gap-2"
           onClick={() => setAbierto(false)}
         >
-          <Image src="/Logov2.png" alt="" width={28} height={32} />
+          <Image src="/logo.png" alt="" width={28} height={32} />
           <span className="text-xl font-extrabold">
             GS<span className="font-normal text-neon">.Code</span>
           </span>
