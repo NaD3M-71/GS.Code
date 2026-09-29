@@ -46,3 +46,6 @@ next-env.d.ts
 
 # backups del VPS
 /backups
+
+# DEPLOY
+DEPLOY.md
